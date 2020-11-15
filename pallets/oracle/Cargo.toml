@@ -1,7 +1,7 @@
 [package]
 authors = []
-edition = '2018'
-license = ''
-name = 'pallet-oracle'
-repository = ''
-version = '0.0.0'
+edition = "2018"
+license = ""
+name = "pallet-oracle"
+repository = ""
+version = "0.0.0"
