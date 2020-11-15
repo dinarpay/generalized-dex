@@ -3,3 +3,8 @@
 [[package]]
 name = "generalized-dex"
 version = "0.0.0"
+
+[[package]]
+name = "generalized-dex-runtime"
+version = "0.0.0"
+
