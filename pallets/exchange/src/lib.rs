@@ -1,4 +1,4 @@
-use frame_support::decl_module;
+use frame_support::{decl_module, decl_event};
 use frame_system;
 
 pub trait Trait: frame_system::Trait {
@@ -10,3 +10,9 @@ decl_module! {
         fn deposit_event() = default;
     }
 }
+
+decl_event!(
+	pub enum Event<T> where AccountId = <T as frame_system::Trait>::AccountId {
+        EmitEvent(AccountId),
+	}
+);
