@@ -1595,6 +1595,9 @@ dependencies = [
  "frame-support 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "frame-system 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-scale-codec 1.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sp-core 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sp-io 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sp-runtime 2.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
