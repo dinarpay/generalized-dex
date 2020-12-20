@@ -29,6 +29,23 @@ decl_storage! {
 		// Learn more about declaring storage items:
 		// https://substrate.dev/docs/en/knowledgebase/runtime/storage#declaring-storage-items
 		Something get(fn something): Option<u32>;
+
+
+		////// Edit below //////
+
+		// Whitelisted token ids
+		// Bitcoin => 1
+		// Ethereum => 2
+		// Dot => 3
+		pub TokenIdToUSVPrice get(fn token_price): map hasher(identity) u8 => u32;
+
+		// balance
+		pub AccountToTokenAmount get(fn withdrawable_value): double_map hasher(blake2_128_concat) T::AccountId, hasher(identity) u8 => u32;
+		pub AccountToIssuedTokenIds get(fn issued_tokens): map hasher(blake2_128_concat) T::AccountId => Vec<u8>;
+		pub TokenIdToTotalSupply get(fn total_supply): map hasher(identity) u8 => u32;
+		// This is the total value that users can sell
+		pub TokenIdToTotalUSVQuotedValue get(fn market_cap): map hasher(identity) u8 => u32;
+		pub TokenIdToFee get(fn fee): map hasher(identity) u8 => u16;
 	}
 }
 
@@ -98,6 +115,29 @@ decl_module! {
 					Ok(())
 				},
 			}
+		}
+
+
+		////// Edit below //////
+
+		#[weight = 10_000 + T::DbWeight::get().reads_writes(1,1)]
+		pub fn exchange(origin) -> dispatch::DispatchResult {
+			Ok(())
+		}
+
+		#[weight = 10_000 + T::DbWeight::get().reads_writes(1,1)]
+		pub fn issue(origin) -> dispatch::DispatchResult {
+			Ok(())
+		}
+
+		#[weight = 10_000 + T::DbWeight::get().reads_writes(1,1)]
+		fn burn(origin) -> dispatch::DispatchResult {
+			Ok(())
+		}
+
+		#[weight = 10_000 + T::DbWeight::get().reads_writes(1,1)]
+		fn mint(origin) -> dispatch::DispatchResult {
+			Ok(())
 		}
 	}
 }
