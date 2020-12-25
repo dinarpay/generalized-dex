@@ -1,5 +1,5 @@
 # generalized-dex
-A new type of DEX, which is price stable, token swappable, non-debt short sell-able, interoperable, and extensible with maximized liquidation
+A new type of DEX, which is extensible, price stable, token swappable, interoperable, and non-debt short-able with maximized liquidation
 
 ## How it works
 Slides: https://docs.google.com/presentation/d/1rSdq13UnjZ00waBhiWXnCoMrnBgh_dW_u3iaUopwyFs/edit?usp=sharing </br>
